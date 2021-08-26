@@ -1,6 +1,7 @@
 ﻿using MockingUnitTestsDemoApp.Impl.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xunit;
 
@@ -39,6 +40,29 @@ namespace MockingUnitTestsDemoApp.Tests.Extensions
         {
             var result = first.CIEquals(second, CIEqualsOption.NullEqualsEmpty);
             Assert.True(result);
+        }
+
+        [Theory]
+        [MemberData(nameof(GetData), parameters: 5)]
+        public void StringExtensions_CIEquals_TrueCases_Variation(string first, string second)
+        {
+            var result = first.CIEquals(second);
+            Assert.True(result);
+        }
+
+        public static IEnumerable<object[]> GetData(int dataRow)
+        {
+            var allData = new List<object[]>
+        {
+            new object[] { "Test Case", "test case" },
+            new object[] { "TeSt CaSe", "tEsT cAsE" },
+            new object[] { "tEsT cAsE", "TeSt CaSe" },
+            new object[] { null, null },
+            new object[] { "", "" },
+
+        };
+
+            return allData.Take(dataRow);
         }
     }
 }
