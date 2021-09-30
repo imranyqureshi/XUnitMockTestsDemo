@@ -1,5 +1,3 @@
-using System;
-
 namespace MockingUnitTestsDemoApp.Models
 {
     public class ErrorViewModel

@@ -5,8 +5,6 @@ using MockingUnitTestsDemoApp.Tests.Mocks.Repositories;
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace MockingUnitTestsDemoApp.Tests.Services

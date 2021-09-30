@@ -1,9 +1,7 @@
 ﻿using MockingUnitTestsDemoApp.Impl.Models;
 using MockingUnitTestsDemoApp.Impl.Services.Interfaces;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MockingUnitTestsDemoApp.Tests.Mocks.Services
 {

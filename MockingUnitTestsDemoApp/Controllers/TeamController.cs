@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MockingUnitTestsDemoApp.Impl.Models;
 using MockingUnitTestsDemoApp.Impl.Services.Interfaces;
+using System.Linq;
 
 namespace MockingUnitTestsDemoApp.Controllers
 {
@@ -27,14 +24,14 @@ namespace MockingUnitTestsDemoApp.Controllers
         [HttpPost]
         public IActionResult Search(TeamSearch search)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("Search"); //Assume there is some manner of implementing PRG pattern here.
             }
 
             var results = _teamService.Search(search);
 
-            if(!results.Any())
+            if (!results.Any())
             {
                 return RedirectToAction("Search");
             }

@@ -2,10 +2,7 @@
 using MockingUnitTestsDemoApp.Impl.Services;
 using MockingUnitTestsDemoApp.Tests.Mocks.Repositories;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace MockingUnitTestsDemoApp.Tests.Services
@@ -38,8 +35,8 @@ namespace MockingUnitTestsDemoApp.Tests.Services
 
             var mockTeamRepo = new MockTeamRepository().MockGetForLeague(mockTeams);
 
-            var playerService = new PlayerService(mockPlayerRepo.Object, 
-                                                  mockTeamRepo.Object, 
+            var playerService = new PlayerService(mockPlayerRepo.Object,
+                                                  mockTeamRepo.Object,
                                                   mockLeagueRepo.Object);
 
             //Act
@@ -70,7 +67,7 @@ namespace MockingUnitTestsDemoApp.Tests.Services
 
             var mockTeamRepo = new MockTeamRepository().MockGetForLeague(mockTeams);
 
-            var playerService = new PlayerService(mockPlayerRepo.Object, 
+            var playerService = new PlayerService(mockPlayerRepo.Object,
                                                   mockTeamRepo.Object,
                                                   mockLeagueRepo.Object);
 
@@ -92,7 +89,7 @@ namespace MockingUnitTestsDemoApp.Tests.Services
             var mockPlayerRepo = new MockPlayerRepository();
             var mockTeamRepo = new MockTeamRepository().MockGetForLeague(new List<Team>());
 
-            var playerService = new PlayerService(mockPlayerRepo.Object, 
+            var playerService = new PlayerService(mockPlayerRepo.Object,
                                                   mockTeamRepo.Object,
                                                   mockLeagueRepo.Object);
 

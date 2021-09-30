@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MockingUnitTestsDemoApp.Controllers;
 using MockingUnitTestsDemoApp.Impl.Models;
-using MockingUnitTestsDemoApp.Tests.Mocks;
 using MockingUnitTestsDemoApp.Tests.Mocks.Services;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace MockingUnitTestsDemoApp.Tests.Controllers

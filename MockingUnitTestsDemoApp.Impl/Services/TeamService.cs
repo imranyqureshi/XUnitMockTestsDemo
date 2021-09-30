@@ -1,11 +1,8 @@
 ﻿using MockingUnitTestsDemoApp.Impl.Models;
 using MockingUnitTestsDemoApp.Impl.Repositories.Interfaces;
 using MockingUnitTestsDemoApp.Impl.Services.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MockingUnitTestsDemoApp.Impl.Services
 {
@@ -32,7 +29,7 @@ namespace MockingUnitTestsDemoApp.Impl.Services
             var allTeams = _teamRepo.GetForLeague(search.LeagueID);
 
             //... and filter them by the specified Founding Date and Direction.
-            if(search.Direction == Enums.SearchDateDirection.OlderThan)
+            if (search.Direction == Enums.SearchDateDirection.OlderThan)
                 return allTeams.Where(x => x.FoundingDate <= search.FoundingDate).ToList();
             else return allTeams.Where(x => x.FoundingDate >= search.FoundingDate).ToList();
         }
