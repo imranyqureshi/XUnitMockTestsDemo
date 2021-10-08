@@ -23,6 +23,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" />
+  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\MockingUnitTestsDemoApp.Impl\MockingUnitTestsDemoApp.Impl.csproj" />
     <ProjectReference Include="..\MockingUnitTestsDemoApp\MockingUnitTestsDemoApp.csproj" />
