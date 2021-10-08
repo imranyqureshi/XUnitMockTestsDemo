@@ -54,7 +54,7 @@ namespace MockingUnitTestsDemoApp.Tests.Extensions
         {
             new object[] { "Test Case", "test case" },
             new object[] { "TeSt CaSe", "tEsT cAsE" },
-            new object[] { "tEsT cAsE", "TeSt CaaSe" },
+            new object[] { "tEsT cAsE", "TeSt CaSe" },
             new object[] { null, null },
             new object[] { "", "" },
             new object[] {"1","1"},
