@@ -59,7 +59,7 @@ namespace MockingUnitTestsDemoApp.Tests.Extensions
             new object[] { "", "" },
             new object[] {"1","1"},
             new object[] {"~","~"},
-            //new object[] {"~!@#$%^&*","~!@#$%^&*"},
+            new object[] {"~!@#$%^&*","~!@#$%^&*"},
             new object[] {" "," " }
         };
             return allData.Take(dataRow);
